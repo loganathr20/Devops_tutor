@@ -14,24 +14,7 @@
     <maven.compiler.target>1.8</maven.compiler.target>
   </properties>
  
-  <repositories>
-    <repository>
-      <id>gitlab-maven</id>
-      <url>https://gitlab.com/api/v4/projects/3467553/packages/maven</url>
-    </repository>
-  </repositories>
   
-  <distributionManagement>
-    <repository>
-      <id>gitlab-maven</id>
-      <url>https://gitlab.com/api/v4/projects/3467553/packages/maven</url>
-    </repository>
-    <snapshotRepository>
-      <id>gitlab-maven</id>
-      <url>https://gitlab.com/api/v4/projects/3467553/packages/maven</url>
-    </snapshotRepository>
-  </distributionManagement>
- 
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
@@ -44,7 +27,7 @@
     <dependency>
       <groupId>org.apache.maven.plugins</groupId>
       <artifactId>maven-war-plugin</artifactId>
-      <version>3.4.0</version>
+      <version>2.2</version>
       <type>maven-plugin</type>
      </dependency>
 
@@ -52,12 +35,15 @@
   
     
   <build>
+    <finalName>simple-maven-deploy</finalName>
+
   <plugins>
-   <plugin>
-      <artifactId>maven-war-plugin</artifactId>
-      <version>3.4.0</version>
-   </plugin>
+        <plugin>
+            <artifactId>maven-war-plugin</artifactId>
+            <version>2.2</version>
+        </plugin>
   </plugins>
+
  
   </build>
   
